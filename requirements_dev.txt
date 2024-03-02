@@ -1,0 +1,9 @@
+gtfs2gmns
+numpy
+pandas
+pyufunc
+Shapely
+urllib3
+requests
+tqdm
+beautifulsoup4
