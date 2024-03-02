@@ -13,7 +13,7 @@
 
 import pandas as pd
 from shapely import Point, LineString, Polygon, geometry, MultiPoint
-from pyufunc import gmns_geo, calc_distance_on_unit_sphere, find_closest_points, func_time
+from pyufunc import gmns_geo, calc_distance_on_unit_sphere, func_time, find_k_nearest_points
 
 
 @func_time
@@ -63,7 +63,7 @@ def generate_access_link(zone_path: str,
     zone_multipoints = MultiPoint([zone_dict[zone_id]["geometry"] for zone_id in zone_dict])
 
     # find the closest node to each zone
-    zone_access_points = find_closest_points(zone_multipoints, nodes_multipoints, radius, k_closest)
+    zone_access_points = find_k_nearest_points(zone_multipoints, nodes_multipoints, radius, k_closest)
 
     # Create a mapping from Point to id
     zone_dict_reversed = {v['geometry']: k for k, v in zone_dict.items()}
