@@ -5,13 +5,18 @@
 # Author/Copyright: Mr. Xiangyong Luo
 ##############################################################
 
+# Date: Feb 25, 2024
+# Fang Tang, tangfang@gmail.com
+
+# This code is to fix some connectivity issues based on released gtfs2gmns 0.1.8
+
 
 import pandas as pd
 from shapely import Point, LineString, Polygon, geometry, MultiPoint
-import pyufunc as uf
-from pyufunc import gmns_geo
+from pyufunc import gmns_geo, calc_distance_on_unit_sphere, find_closest_points, func_time
 
 
+@func_time
 def generate_access_link(zone_path: str,
                          node_path: str,
                          radius: float,
@@ -58,19 +63,28 @@ def generate_access_link(zone_path: str,
     zone_multipoints = MultiPoint([zone_dict[zone_id]["geometry"] for zone_id in zone_dict])
 
     # find the closest node to each zone
-    zone_access_points = uf.find_closest_points(zone_multipoints, nodes_multipoints, radius, k_closest)
+    zone_access_points = find_closest_points(zone_multipoints, nodes_multipoints, radius, k_closest)
+
+    # Create a mapping from Point to id
+    zone_dict_reversed = {v['geometry']: k for k, v in zone_dict.items()}
+    node_dict_reversed = {v: k for k, v in node_dict.items()}
 
     access_links = []
     # create access links
     for zone_center in zone_access_points:
         if zone_access_points[zone_center]:
             for node_id in zone_access_points[zone_center]:
+
+                # create zone and node id from the mapping
+                zone_id_i = zone_dict_reversed[zone_center]
+                node_id_i = node_dict_reversed[node_id]
+
                 access_links.append(
                     gmns_geo.Link(
-                        id=f"{zone_center.wkt}_{node_id.wkt}",
-                        from_node_id=zone_center.wkt,
-                        to_node_id=node_id.wkt,
-                        length=uf.calc_distance_on_unit_sphere(zone_center, node_id, "meter"),
+                        id=f"{zone_id_i}_{node_id_i}",
+                        from_node_id=zone_id_i,
+                        to_node_id=node_id_i,
+                        length=calc_distance_on_unit_sphere(zone_center, node_id, "meter"),
                         lanes=1,
                         free_speed=-1,
                         capacity=-1,
