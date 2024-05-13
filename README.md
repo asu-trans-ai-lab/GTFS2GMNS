@@ -144,7 +144,7 @@ path_node = "Path to node.csv"    # please make sure you have node_id, x_coord, 
 radius = 100 # unit in meters
 k_closest = 0 # if 0, generate all accessible links within radius. if 1, closest link within the radius...
 
-access_links = gg.generate_access_lins(path_zone, path_node, radius, k_closest)
+access_links = gg.generate_access_links(path_zone, path_node, radius, k_closest)
 
 access_links.to_csv("access_link.csv", index=False)
 
@@ -211,17 +211,6 @@ access_links.to_csv("access_link.csv", index=False)
 ## Citing gtfs2gmns
 
 If you use gtfs2gmns in your research please use the following BibTeX entry:
-
-```
-@misc{gtfs2gmns,
-  author =       {Xiangyong Luo, Fang Tang, Han Wang, Xuesong Zhou},
-  title =        {gtfs2gmns - A class-based instance designed for reading, converting, analyzing, and visualizing GTFS data.},
-  howpublished = {Github},
-  year =         {2023},
-  url =          {https://github.com/xyluo25/gtfs2gmns}
-}
-```
-
 
 ```
 @misc{gtfs2gmns,

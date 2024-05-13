@@ -132,10 +132,3 @@ def hhmm_to_minutes(time_period_1: str) -> list:
     to_time_min_1 = to_time_1.hour * 60 + to_time_1.minute
 
     return [from_time_min_1, to_time_min_1]
-
-
-if __name__ == '__main__':
-
-    path = r"C:\Users\roche\Anaconda_workspace\001_Github.com\GTFS2GMNS\test\GTFS\routes"
-
-    df = reading_text(path)

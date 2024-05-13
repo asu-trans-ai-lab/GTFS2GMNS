@@ -6,7 +6,7 @@
 ##############################################################
 
 # **** Package Info **** #
-pkg_version = "0.1.6"
+pkg_version = "0.2.0"
 pkg_name = "gtfs2gmns"
 pkg_author = "Mr. Xiangyong Luo, Mrs. Fang Tang,  Dr. Xuesong Simon Zhou"
 pkg_email = "luoxiangyong01@gmail.com,fangt@asu.edu, xzhou74@asu.edu"
