@@ -13,7 +13,7 @@ import pandas as pd
 from gtfs2gmns.func_lib.data_convert import (determine_terminal_flag,
                                              stop_sequence_label)
 from gtfs2gmns.utility_lib import validate_time_period
-from pyufunc import func_running_time, get_filenames_by_ext, path2linux, check_files_existence
+from pyufunc import func_running_time, get_filenames_by_ext, path2linux, check_files_in_dir
 
 
 @func_running_time
@@ -43,8 +43,11 @@ def read_gtfs_single(gtfs_dir_single: str, time_period: str, required_files: lis
 
     print(f"Info: Checking if required files exist in the folder: \n    :{gtfs_dir_single}")
 
-    txt_files_from_folder_abspath = get_filenames_by_ext(gtfs_dir_single, file_ext=".txt")
-    if not check_files_existence(list(required_files_dict.values()), txt_files_from_folder_abspath):
+    # txt_files_from_folder_abspath = get_filenames_by_ext(gtfs_dir_single, file_ext=".txt")
+    # if not check_files_existence(list(required_files_dict.values()), txt_files_from_folder_abspath):
+    #     raise Exception("Error: Required files not exist in the folder!")
+
+    if not check_files_in_dir(list(required_files_dict.values()), gtfs_dir_single):
         raise Exception("Error: Required files not exist in the folder!")
 
     # Step 2: Check and Format time period

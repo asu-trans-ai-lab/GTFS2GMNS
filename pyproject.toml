@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools", "wheel", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gtfs2gmns"
+version = "0.2.1"
+description = "pyufunc consolidates frequently used utility functions into one cohesive package"
+authors = [
+    {name = "Xiangyong Luo", email = "luoxiangyong01@gmail.com"},
+    {name = "Xuesong Simon Zhou", email = "xzhou74@asu.com"},
+    {name = "Fang Tang", email = "fangt@asu.edu"}
+]
+maintainers = [
+    {name = "Xiangyong Luo", email = "luoxiangyong01@gmail.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    'Intended Audience :: Developers',
+    "Operating System :: OS Independent",
+    'Topic :: Software Development :: Libraries'
+]
+
+readme = {file = 'README.md', content-type='text/markdown'}
+license = {file = 'LICENSE', content-type='text/plain'}
+# license = {text = "Apache License"}
+
+requires-python = ">=3.10"
+keywords = ["General Transit Feed Specification (GTFS)", "GMNS", "Visualization", "Space-time Trajectory"]
+
+dynamic = ["dependencies"]
+
+[project.urls]
+"Homepage" = 'https://github.com/xyluo25/gtfs2gmns'
+'Bug Tracker' = 'https://github.com/xyluo25/gtfs2gmns/issues'
+'License' = 'https://github.com/xyluo25/gtfs2gmns/blob/main/LICENSE'
+'Contact' = 'https://github.com/xyluo25/gtfs2gmns'
+
+# Repository = "https://github.com/xyluo25/grid2demand"
+"Download" = "https://www.pepy.tech/projects/gtfs2gmns"
+
+#         # 'Publication': '',
+#         # 'Citation': '',
+#         # 'Acknowledgement': '',
+#         # 'FAQs': '',
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+# optional-dependencies = {file = ["requirements_dev.txt"]}
+
+[tool.setuptools]
+py-modules = []
+package-data = {'gtfs2gmns' = ['*.txt', '*.xls', '*.xlsx', '*.csv'], "test_data" = ['*.xls']}
+
+# [tool.setuptools.packages.find]
+# where = ["gtfs2gmns"]
+
+# [tool.setuptools.package-data]
+# gtfs2gmns = ['*.txt', '*.xls', '*.xlsx', '*.csv']

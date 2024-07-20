@@ -1,4 +1,4 @@
-numpy
-pandas
-pyufunc
-Shapely
+pandas==2.2.2
+pyufunc==0.3.3
+setuptools==70.0.0
+Shapely==2.0.5

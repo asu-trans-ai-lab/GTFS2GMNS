@@ -29,4 +29,3 @@ def validate_time_period(time_period: str) -> list:
     period_start_time = datetime.datetime.strptime(period_start_str, '%H:%M:%S')
     period_end_time = datetime.datetime.strptime(period_end_str, '%H:%M:%S')
     return [period_start_time, period_end_time]
-
