@@ -13,11 +13,13 @@ import pandas as pd
 from gtfs2gmns.func_lib.data_convert import (determine_terminal_flag,
                                              stop_sequence_label)
 from gtfs2gmns.utility_lib import validate_time_period
-from pyufunc import func_running_time, get_filenames_by_ext, path2linux, check_files_in_dir
+from pyufunc import func_running_time, path2linux, check_files_in_dir
 
 
 @func_running_time
-def read_gtfs_single(gtfs_dir_single: str, time_period: str, required_files: list = ['agency.txt', 'stops.txt', 'routes.txt', 'trips.txt', 'stop_times.txt']) -> dict:
+def read_gtfs_single(gtfs_dir_single: str,
+                     time_period: str,
+                     required_files: list = ['agency.txt', 'stops.txt', 'routes.txt', 'trips.txt', 'stop_times.txt']) -> dict:
     """read gtfs data from a single folder
 
     Args:
