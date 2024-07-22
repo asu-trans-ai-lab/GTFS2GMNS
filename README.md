@@ -18,25 +18,6 @@ On TransitFeed [homepage](https://transitfeeds.com/), users can browse and downl
 
 GTFS2GMNS can handle the transit data from several agencies. Users need to configure different sub-files in the same directory. Under the `test/GTFS` folder, a subfolder `Pheonix` with its owm GTFS data is set up.
 
-### *Convert GTFS Data into GMNS Format*
-
-```python
-if __name__ == '__main__':
-    global period_start_time
-    global period_end_time
-    input_gtfs_path = 'GTFS'
-    output_gmns_path = '.'
-    time_period_id = 1
-    time_period = '1200_1300'
-    period_start_time, period_end_time = _hhmm_to_minutes(time_period)
-
-    gtfs2gmns(input_gtfs_path, output_gmns_path)
-```
-
-The input parameter  `input_gtfs_path` is the path of GTFS data, and the parameter  `output_gmns_path` is the path of output GMNS files. Users can customize the parameter  `time_period`, such as 12:00 to 13:00.
-
-The output files include node.csv and link.csv.
-
 ## Main Steps
 
 ### *Read GTFS data*
