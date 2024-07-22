@@ -223,7 +223,7 @@ If you use gtfs2gmns in your research please use the following BibTeX entry:
 ```
 
 
-```
+```bibtex
 @misc{gtfs2gmns,
   author =       {Xiangyong Luo, Fang Tang, Han Wang, Xuesong Zhou},
   title =        {gtfs2gmns - A class-based instance designed for reading, converting, analyzing, and visualizing GTFS data.},
@@ -232,3 +232,10 @@ If you use gtfs2gmns in your research please use the following BibTeX entry:
   url =          {https://github.com/xyluo25/gtfs2gmns}
 }
 ```
+
+
+
+```
+Luo, X., Tang, F, Wang, H and Zhou, X. (2021, April 4). GTFS2GMNS. Retrieved from https://github.com/xyluo25/gtfs2gmns
+```
+

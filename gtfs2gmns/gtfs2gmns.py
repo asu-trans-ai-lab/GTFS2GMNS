@@ -330,8 +330,8 @@ class GTFS2GMNS:
         # step 4. save node and link data
         # create node and link result path
         if self.isSaveToCSV:
-            node_result_file = path2linux(os.path.join(self.gtfs_result_dir, "node.csv"))
-            link_result_file = path2linux(os.path.join(self.gtfs_result_dir, "link.csv"))
+            node_result_file = path2linux(os.path.join(self.gtfs_output_dir, "node.csv"))
+            link_result_file = path2linux(os.path.join(self.gtfs_output_dir, "link.csv"))
 
             # validate result file path exist or not, if exist, create new file wit _1 suffix
             node_result_file = generate_unique_filename(node_result_file)
