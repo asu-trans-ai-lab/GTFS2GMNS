@@ -6,7 +6,7 @@
 ##############################################################
 
 
-import gtfs2gmns as gg
+# import gtfs2gmns as gg
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -20,10 +20,10 @@ except Exception:
     modules_needed = []
 
 setuptools.setup(
-    name=gg.pkg_name,  # Replace with your own username
-    version=gg.pkg_version,
-    author=gg.pkg_author,
-    author_email=gg.pkg_email,
+    name="gtfs2gmns",  # Replace with your own username
+    version="0.2.2",
+    author="Xiangyong Luo, Fang Tang, Xuesong Simon Zhou",
+    author_email="luoxiangyong01@gmail.com, fangt@asu.edu, xzhou74@asu.edu",
 
     keywords=["GTFS", "GMNS", "Public Transportation", "Equity"],
     description="A class-based instance designed for reading, converting, analyzing, and visualizing GTFS data",

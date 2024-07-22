@@ -211,7 +211,7 @@ class GTFS2GMNS:
         return gtfs_folder_list
 
     def __get_agency_name_from_folder(self, folder: str) -> str:
-        agency_df = pd.read_csv(folder + '/agency.txt', encoding='utf-8-sig')
+        agency_df = pd.read_csv(f'{folder}/agency.txt', encoding='utf-8-sig')
         return agency_df.agency_name[0]
 
     def __get_text_data_from_folder_lst(self, folder_lst: list, file_name: str) -> pd.DataFrame:
