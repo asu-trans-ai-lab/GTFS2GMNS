@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gtfs2gmns"
-version = "0.2.2"
-description = "pyufunc consolidates frequently used utility functions into one cohesive package"
+version = "0.2.3"
+description = "A class-based instance designed for reading, converting, analyzing, and visualizing GTFS data"
 authors = [
     {name = "Xiangyong Luo", email = "luoxiangyong01@gmail.com"},
     {name = "Xuesong Simon Zhou", email = "xzhou74@asu.com"},

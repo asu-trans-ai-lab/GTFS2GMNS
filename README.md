@@ -8,7 +8,7 @@ Your comments will be valuable for code review and improvement. Please feel free
 
 ### *Download GTFS Data*
 
-On TransitFeed [homepage](https://transitfeeds.com/), users can browse and download official GTFS  feeds from around the world. Make sure that the following files are present, so that we can proceed.
+On TransitFeed [homepage](https://transitfeeds.com/), users can browse and download official GTFS feeds from around the world. Make sure that the following files are present, so that we can proceed.
 
 * stop.txt
 * route.txt
@@ -16,7 +16,7 @@ On TransitFeed [homepage](https://transitfeeds.com/), users can browse and downl
 * stop_times.txt
 * agency.txt
 
-GTFS2GMNS can handle the transit data from several agencies. Users need to configure different sub-files in the same directory. Under the `test/GTFS` folder, a subfolder `Pheonix` with its owm GTFS data is set up.
+GTFS2GMNS can handle the transit data from several agencies. Users need to configure different sub-files in the same directory.
 
 ## Main Steps
 
@@ -135,7 +135,7 @@ access_links.to_csv("access_link.csv", index=False)
 
 
 | func_type     | func_name                    | Python example | Input | Output    | Remark                                                        |
-| :------------ | :--------------------------- | :------------- | ----- | --------- | ------------------------------------------------------------- |
+| :-------------- | :----------------------------- | :--------------- | ------- | ----------- | --------------------------------------------------------------- |
 | read-show     | agency                       | `gg.agency`    | NA    | DataFrame | This attribute load and return agency data from source folder |
 |               | calendar                     | `gg.calendar`  |       |           |                                                               |
 |               | calendar_dates               |                |       |           |                                                               |
@@ -177,9 +177,6 @@ access_links.to_csv("access_link.csv", index=False)
 |               |                              |                |       |           |                                                               |
 |               |                              |                |       |           |                                                               |
 
-
-
-
 ## Upcoming Features
 
 - [ ] Output service and trace files.
@@ -203,7 +200,6 @@ If you use gtfs2gmns in your research please use the following BibTeX entry:
 }
 ```
 
-
 ```bibtex
 @misc{gtfs2gmns,
   author =       {Xiangyong Luo, Fang Tang, Han Wang, Xuesong Zhou},
@@ -214,9 +210,6 @@ If you use gtfs2gmns in your research please use the following BibTeX entry:
 }
 ```
 
-
-
 ```
 Luo, X., Tang, F, Wang, H and Zhou, X. (2021, April 4). GTFS2GMNS. Retrieved from https://github.com/xyluo25/gtfs2gmns
 ```
-
