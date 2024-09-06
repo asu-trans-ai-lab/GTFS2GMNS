@@ -13,3 +13,10 @@ check_python_version()
 # from .pkg_configs import *
 #
 # print(f"gtfs2gmns version: {pkg_version}")
+
+# resources
+# https://github.com/remix/partridge
+# https://github.com/Bondify/gtfs_functions
+# https://github.com/UTEL-UIUC/gtfs_segments/tree/main
+
+# TRB Data Challenge: https://www.trb-transit-mgmt-perf.org/annual-meetings/transit-data-challenge
