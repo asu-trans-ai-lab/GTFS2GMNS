@@ -1,0 +1,5 @@
+signature,initial_wait,transfer_wait,in_vehicle,n_transfers,cost,arrival
+N21|07:28|H1>N23>V2|N43,2,6,8.0,1,19.0,07:44
+N21|07:28|H1>N23>V3|N43,2,11,8.0,1,24.0,07:49
+N21|07:28|H2>N23>V3|N43,7,6,8.0,1,24.0,07:49
+N21|07:28|X1|N43,5,0,10.0,0,15.0,07:43

@@ -1,0 +1,10 @@
+from_trip,to_trip,gap_min,feasible
+H1,V2,6,1
+H1,V3,11,1
+H2,V3,6,1
+H1,V1,1,0
+H2,V1,-4,0
+H2,V2,1,0
+H3,V1,-9,0
+H3,V2,-4,0
+H3,V3,1,0
